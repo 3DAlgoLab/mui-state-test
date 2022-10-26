@@ -1,33 +1,34 @@
 import * as React from "react";
 import Switch from "@mui/material/Switch";
 
-export default function ControlledSwitches() {
-  const [checked1, setChecked1] = React.useState(false);
-  const [checked2, setChecked2] = React.useState(false);
+import { proxy } from "valito";
 
+const state = proxy({ check1: false, check2: false });
+
+export default function ControlledSwitches() {
   const handleChange1 = (event) => {
-    setChecked1(event.target.checked);
+    state.check1 = event.target.checked;
     if (event.target.checked) {
-      setChecked2(false);
+      state.check2 = false;
     }
   };
 
   const handleChange2 = (event) => {
-    setChecked2(event.target.checked);
+    state.check2 = event.target.checked;
     if (event.target.checked) {
-      setChecked1(false);
+      state.check1 = false;
     }
   };
 
   return (
     <React.Fragment>
       <Switch
-        checked={checked1}
+        checked={state.check1}
         onChange={handleChange1}
         inputProps={{ "aria-label": "controlled" }}
       />
       <Switch
-        checked={checked2}
+        checked={state.check2}
         onChange={handleChange2}
         inputProps={{ "aria-label": "controlled" }}
       />
