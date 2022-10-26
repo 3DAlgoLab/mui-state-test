@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "@emotion/react": "latest",
+    "@emotion/styled": "latest",
+    "@mui/material": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "valtio": "1.7.4"
+  },
+  "description": "https://github.com/mui/material-ui/blob/v5.10.11/docs/data/material/components/switches/ControlledSwitches.js",
+  "devDependencies": {
+    "react-scripts": "latest"
+  },
+  "name": "g5ew30",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
